@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3001;
+const PORT = process.env.PORT;
 const Data=require('./src/data/weather.json');
 const cors=require('cors');
 
@@ -58,6 +58,6 @@ app.get('/weather',(req,res)=>{
 
   
   
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+app.listen(PORT, () => {
+    console.log(`Example app listening on port ${PORT}`)
   })
